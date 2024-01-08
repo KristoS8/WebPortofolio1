@@ -1,0 +1,59 @@
+.jumbotron {
+  padding: 3rem 1rem;
+  height: 86vh;
+}
+
+.as {
+  text-decoration: none;
+}
+
+.as:hover {
+  color: navy;
+}
+
+#footer {
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #212529;
+}
+
+#text-footer {
+  font-size: 12px;
+}
+
+.range {
+  -webkit-appearance: none;
+  width: 75%;
+  height: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: #171a1c;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.controls div {
+  width: 50px;
+  height: 50px;
+  margin: 13px;
+  background: #ffffff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px #5a5a5a;
+}
+
