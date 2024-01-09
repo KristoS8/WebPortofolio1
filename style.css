@@ -29,6 +29,8 @@
   height: 10px;
   background-color: #ffffff;
   border-radius: 5px;
+  margin-left: 12px;
+  margin-right: 12px;
 }
 
 .range::-webkit-slider-thumb {
@@ -57,3 +59,24 @@
   box-shadow: 0 3px 6px #5a5a5a;
 }
 
+.songSlider {
+  display: flex;
+  align-items: center;
+}
+
+#current-time {
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#song-duration {
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.line {
+  border: none;
+  height: 3px;
+  color: #333;
+  background-color: #333;
+}

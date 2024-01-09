@@ -39,7 +39,8 @@
 
     <!-- Awal Jumbotron -->
     <div class="jumbotron jumbotron-fluid" style="background-color: #ffffff; height: 1800px">
-      <div class="container">
+      <!-- Musik Project -->
+      <div class="container" style="margin-top: 30px">
         <div class="row">
           <div class="col-lg-4 p-3 d-flex justify-content-center">
             <div class="card text-center" style="background-color: #d9d9d9; border-radius: 15px; width: 75%">
@@ -47,11 +48,16 @@
               <div class="card-body">
                 <div class="fw-bold m-1">I Love You So</div>
                 <div class="fw-bold text-secondary m-2">The Walters - I Love You So (Slowed + Reverb + Doomer Wave)</div>
-                <audio id="song1" controls>
-                  <source src="Music/i lo you so 2.mp3" type="audio/mpeg" />
+
+                <audio id="song1">
+                  <source src="Music/i lo you so 2.mp3" type="audio/mpeg" id="music" />
                 </audio>
 
-                <input type="range" value="0" class="range" id="progressBar" onchange="progressOnchange()"/>
+                <div class="songSlider">
+                  <div id="current-time">00:00</div>
+                  <input type="range" value="0" class="range" id="progressBar" onchange="progressOnchange()" />
+                  <div id="song-duration">00:00</div>
+                </div>
 
                 <div class="controls">
                   <div class="col-lg-4"><i class="bi bi-skip-backward-fill"></i></div>
@@ -61,19 +67,58 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4 fs-6 p-3 d-flex justify-content-center">
+          <div class="col-lg-4 p-3 d-flex justify-content-center">
             <div class="card text-center w-75" style="background-color: #d9d9d9; border-radius: 15px">
               <img src="Music/music1.jpg" style="height: 230px; border-radius: 15px" class="card-img-top" alt="project musik 1" />
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div class="fw-bold m-1">A Piece Of You</div>
+                <div class="fw-bold text-secondary m-2">Nathaniel Constantin - A Piece Of You (Slowed + Reverb)</div>
               </div>
             </div>
           </div>
-          <div class="col-lg-4 fs-6 p-3 d-flex justify-content-center">
+          <div class="col-lg-4 p-3 d-flex justify-content-center">
             <div class="card text-center w-75" style="background-color: #d9d9d9; border-radius: 15px">
               <img src="Music/music1.jpg" style="height: 230px; border-radius: 15px" class="card-img-top" alt="project musik 1" />
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div class="fw-bold m-1">Pesan Terakhir x Tak Dianggap</div>
+                <div class="fw-bold text-secondary m-2">Lyodra - Pesan Terakhir x Tak Dianggap (Slowed + Reverb)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Akhir Music Project -->
+
+      <div class="container" style="margin-top: 80px">
+        <div class="row">
+          <div class="col-lg-6 d-flex justify-content-center">
+            <div class="card" style="max-width: 540px">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="Project Micro/Landing Page.png" class="img-fluid rounded-start" alt="pro 1" />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title mt-3 fw-bolder" style="border-bottom: 3px solid black; padding-bottom: 15px; width: 150px;">Card title</h5>
+                    <p class="card-text mt-3" style="font-size: 13px;">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 d-flex justify-content-center">
+            <div class="card" style="max-width: 540px">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="Project Micro/Landing Page.png" class="img-fluid rounded-start" alt="pro 1" />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

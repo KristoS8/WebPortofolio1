@@ -7,8 +7,12 @@ currentYear.innerText = date.getFullYear();
 let progress = document.getElementById('progressBar');
 let iconPlay = document.getElementById('iconPlay');
 let song1 = document.getElementById('song1');
+let songCurrentTime = document.getElementById('current-time');
+let musicDuration = document.getElementById('song-duration');
 
-
+let updateTimer;
+updateTimer = setInterval(setUpdate, 1000);
+song1.pause();
 
 function playPause() {
   if (iconPlay.classList.contains('bi-pause-fill')) {
@@ -23,18 +27,36 @@ function playPause() {
 }
 
 function progressOnchange() {
-  progress.onchange = function () {
-    song1.play();
-    song1.currentTime = progress.value;
-    iconPlay.classList.add('bi-pause-fill');
-    iconPlay.classList.remove('bi-play-fill');
-  };
+  let progressAudio = song1.duration * (progress.value / 100);
+  song1.currentTime = progressAudio;
 }
 
-if (song1.play()) {
-  setInterval(() => {
-    progress.value = song1.currentTime;
-  }, 500);
-}
+function setUpdate() {
+  let progressPosition = 0;
+  if (!isNaN(song1.duration)) {
+    progressPosition = song1.currentTime * (100 / song1.duration);
+    progress.value = progressPosition;
 
+    let currentMinutes = Math.floor(song1.currentTime / 60);
+    let currentSeconds = Math.floor(song1.currentTime - currentMinutes * 60);
+    let durationMinutes = Math.floor(song1.duration / 60);
+    let durationSeconds = Math.floor(song1.duration - durationMinutes * 60);
+
+    if (currentSeconds < 10) {
+      currentSeconds = '0' + currentSeconds;
+    }
+    if (durationSeconds < 10) {
+      durationSeconds = '0' + durationSeconds;
+    }
+    if (currentMinutes < 10) {
+      currentMinutes = '0' + currentMinutes;
+    }
+    if (durationMinutes < 10) {
+      durationMinutes = '0' + durationMinutes;
+    }
+
+    songCurrentTime.textContent = currentMinutes + ':' + currentSeconds;
+    musicDuration.textContent = durationMinutes + ':' + durationSeconds;
+  }
+}
 // end of music player
