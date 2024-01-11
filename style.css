@@ -80,3 +80,9 @@
   color: #333;
   background-color: #333;
 }
+
+.garis-horizontal {
+  border: none;
+  border-top: 3px solid #212020;
+  width: 100px;
+}
