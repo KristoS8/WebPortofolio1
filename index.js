@@ -60,3 +60,7 @@ function setUpdate() {
   }
 }
 // end of music player
+
+function Callalert() {
+  alert("Halaman belum dibuat,coba lagi nanti!")
+}
